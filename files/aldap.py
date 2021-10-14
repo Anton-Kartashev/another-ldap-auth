@@ -54,7 +54,8 @@ class Aldap:
 		try:
 			start = time.time()
 			self.connect.simple_bind_s(self.dnUsername, self.dnPassword)
-			result = self.connect.search_s(self.searchBase, ldap.SCOPE_SUBTREE, searchFilter)
+            # add memberOf attr display by default.
+			result = self.connect.search_s(self.searchBase, ldap.SCOPE_SUBTREE, searchFilter,["memberOf"])
 			#self.connect.unbind_s()
 			end = time.time()-start
 			self.logs.info({'message':'Search by filter.', 'filter': searchFilter, 'elapsedTime': str(end)})
