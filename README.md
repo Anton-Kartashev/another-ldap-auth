@@ -1,3 +1,5 @@
+⚠️ This is forked version for openldap 2.4.x memberOf compatibility
+
 ⚠️ New version of Another LDAP via form-based here https://github.com/dignajar/another-ldap
 
 # Another LDAP authentication
